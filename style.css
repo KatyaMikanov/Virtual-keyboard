@@ -1,0 +1,47 @@
+body {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.keyboard {
+    margin: 0 auto;
+    padding-top: 30px;
+    box-sizing: border-box;;
+}
+
+.screen {
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid black;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.boardButtons {
+    width: 910px;
+    padding: 20px;
+    background-color: gray;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: auto;
+    border: 4px solid black;
+    border-radius: 8px;
+}
+
+.button {
+    background-color: rgb(62, 61, 61);
+    padding: 12px 20px;
+    font-size: 23px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.active {
+    background-color: brown;
+}
