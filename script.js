@@ -1,14 +1,38 @@
 //virtual keyboard
 
-const screen = document.querySelector ('body');
+const keyboard = document.querySelector ('body');
+let board;
+let boardButtons;
+
+let arrayTextButtons = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', ' ' , 'Shift', 'Ctrl', 'Win', 'Alt', '                       ', 'Alt', ' ', ' ', ' ', 'Ctrl'];
 
 
 function createKeyBoard () {
-    let  board = document.createElement("TEXTAREA");;
-    board.classList.add('screen');
 
+    board = document.createElement("div");
+    board.classList.add('keyboard');
 
-    screen.append(board);
+    let  textBoard = document.createElement("TEXTAREA");
+    textBoard.classList.add('screen');
+
+    boardButtons = document.createElement("div");
+    boardButtons.classList.add('boardButtons');
+
+    function createButton () {
+        arrayTextButtons.forEach (el => {
+            let newButton = document.createElement("div");
+            newButton.classList.add('button');
+            newButton.textContent = el;
+
+            boardButtons.append(newButton);
+        })
+    }
+    createButton ()
+ 
+    board.append(textBoard);
+    board.append(boardButtons);
+    keyboard.append(board);
 }
 
 createKeyBoard ();
+
