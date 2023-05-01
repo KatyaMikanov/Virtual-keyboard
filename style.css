@@ -6,6 +6,7 @@ body {
 .keyboard {
     margin: 0 auto;
     padding-top: 30px;
+    box-sizing: border-box;;
 }
 
 .screen {
@@ -21,7 +22,7 @@ body {
 
 .boardButtons {
     width: 920px;
-padding: 20px;
+    padding: 20px;
     background-color: gray;
     display: flex;
     gap: 8px;
@@ -35,6 +36,12 @@ padding: 20px;
     background-color: rgb(62, 61, 61);
     padding: 12px 20px;
     font-size: 23px;
-color: white;
-border-radius: 8px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.active {
+    background-color: brown;
 }
