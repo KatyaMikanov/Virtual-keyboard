@@ -5,7 +5,7 @@ let board;
 let boardButtons;
 let textBoard;
 
-let arrayTextButtons = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', ' ' , 'Shift', 'Ctrl', 'Win', 'Alt', '                       ', 'Alt', ' ', ' ', ' ', 'Ctrl'];
+let arrayTextButtons = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter', 'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '&#9650', 'Shift', 'Ctrl', 'Win', 'Alt', '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp', 'Alt', '&#9664', '&#9660', '&#9658', 'Ctrl'];
 
 
 function createKeyBoard () {
@@ -23,7 +23,7 @@ function createKeyBoard () {
         arrayTextButtons.forEach (el => {
             let newButton = document.createElement("div");
             newButton.classList.add('button');
-            newButton.textContent = el;
+            newButton.innerHTML = el;
 
             boardButtons.append(newButton);
         })
