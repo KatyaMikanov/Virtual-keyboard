@@ -15,6 +15,7 @@ body {
     border: 2px solid black;
     font-size: 28px;
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 .boardButtons {
