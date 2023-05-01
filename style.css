@@ -1,0 +1,14 @@
+body {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.screen {
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid black;
+    font-size: 18px;
+}
+
