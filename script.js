@@ -44,3 +44,15 @@ document.querySelectorAll('.boardButtons').forEach(function (element) {
         })
     }
 })
+
+
+boardButtons.addEventListener('click', function (e) {
+    let pushingButton = e.target;
+    pushingButton.classList.toggle('active');
+    console.log(pushingButton)
+    boardButtons.addEventListener('click', function (e) {
+        pushingButton.classList.remove('active');
+        let pushingNextButton = e.target;
+        pushingNextButton.classList.add('active');
+    })
+})
